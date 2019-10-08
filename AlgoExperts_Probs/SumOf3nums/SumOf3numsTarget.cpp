@@ -17,7 +17,7 @@ vector<vector<int> > sumOfthreeNums(vector<int> &array, int targetSum)
 		int left = i+1;
 		int right = array.size()-1;
 		
-		while(left<right){
+		while(left < right){
 			int currentSum = array[i] + array[left] + array[right];
 			if(currentSum == targetSum){
 				triplets.push_back({array[i],array[left],array[right]});

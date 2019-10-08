@@ -4,7 +4,7 @@
 
 using namespace std;
 
-vector<int> smallestDifference(vector<int> arrayOne, vector<int> arrayTwo) {
+vector<int> smallestDifference(vector<int> &arrayOne, vector<int> &arrayTwo) {
   // Write your code here.
   sort(arrayOne.begin(),arrayOne.end());
   sort(arrayTwo.begin(),arrayTwo.end());
@@ -45,7 +45,7 @@ vector<int> smallestDifference(vector<int> arrayOne, vector<int> arrayTwo) {
   	
   	if(tempDiff < diff){
   		diff = tempDiff;
-  		smallestPair = {first, second};
+  		smallestPair = {first, second, diff};
 	}
   }
   
