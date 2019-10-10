@@ -42,13 +42,17 @@ int main()
 {
 	vector<int> arr = {5,4,1,10,13,3,6,2};
 	
-	vector< vector<int> > result{};
+	vector< vector<int> > result;
 		
 	result = sumOfthreeNums(arr,15);
 	
-	for(i=0;i < result.size()-1; i++){
-		for(int j = 0;j < )
-		cout<< ;
+	
+	//Multidimensional vector handling 
+	for(int i=0;i < result.size()-1; i++){
+		cout<<"{";
+		for(int j = 0;j < result[i].size();j++)
+			cout<<result[i][j]<<" ";
+		cout<<"}"<<endl;
 	}
 	
 	return 0;
