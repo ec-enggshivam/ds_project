@@ -85,7 +85,6 @@ Node* deleteNode(Node* root, int k)
   // If both children exist
   else
   {
-
     Node* succParent = root->right;
 
     // Find successor
