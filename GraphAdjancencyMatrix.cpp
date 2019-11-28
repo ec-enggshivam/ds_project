@@ -1,5 +1,5 @@
 // A simple representation of graph using STL 
-#include<bits/stdc++.h> 
+#include<vector>
 using namespace std; 
 
 // A utility function to add an edge in an 
