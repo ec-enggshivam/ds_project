@@ -16,34 +16,32 @@ struct Node
 void create_new_node(struct Node** start, int non_zero_element, 
                      int row_index, int column_index ) 
 { 
-    struct Node *temp, *r; 
-    temp = *start; 
-    if (temp == NULL) 
-    { 
-        // Create new node dynamically 
-        temp = (struct Node *) malloc (sizeof(struct Node)); 
-        temp->value = non_zero_element; 
-        temp->row_position = row_index; 
-        temp->column_postion = column_index; 
-        temp->next = NULL; 
-        *start = temp; 
-  
-    } 
-    else
-    { 
-        while (temp->next != NULL) 
-            temp = temp->next; 
-  
-        // Create new node dynamically 
-        r = (struct Node *) malloc (sizeof(struct Node)); 
-        r->value = non_zero_element; 
-        r->row_position = row_index; 
-        r->column_postion = column_index; 
-        r->next = NULL; 
-        temp->next = r; 
-  
-    } 
-} 
+  struct Node *temp, *r;
+  temp = *start;
+  if (temp == NULL)
+  {
+      // Create new node dynamically
+      temp = (struct Node *) malloc (sizeof(struct Node));
+      temp->value = non_zero_element;
+      temp->row_position = row_index;
+      temp->column_postion = column_index;
+      temp->next = NULL;
+      *start = temp;
+  }
+  else
+  {
+      while (temp->next != NULL)
+          temp = temp->next;
+
+      // Create new node dynamically
+      r = (struct Node *) malloc (sizeof(struct Node));
+      r->value = non_zero_element;
+      r->row_position = row_index;
+      r->column_postion = column_index;
+      r->next = NULL;
+			temp->next = r;
+   }
+}
   
 // This function prints contents of linked list 
 // starting from start 
